@@ -1,0 +1,238 @@
+/*Cores Principais do Site:
+Cor de Fundo: #0F0840 ou rgb(15, 8, 64)
+Cor Secundária: #170C59 ou rgb(23, 12, 89)
+Cor Terciaria ou de uva: #552F72 ou rgb(85, 47, 114)
+Quarta Cor, parecida com a secundária só que mais claro: #2B178B ou rgb(43, 23, 139)
+Branco encardido: #EEEFEE ou rgb(238, 239, 238)
+*/
+
+body {
+    background:#262626;
+    background-image: url('../img/fundo_web.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #262626;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fade-in 0.5s ease;
+}
+
+header {
+    background-color: #0F0840;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 100px;
+}
+
+.bem-vindo-mensagem {
+    font-size: 30px;
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+    cursor: default;
+}
+
+main {
+    text-align: center;
+}
+
+.mensagem-fundo {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+    font-size: 80px;
+    margin-top: 80px;
+    color: rgb(85, 47, 114); /* Um tom mais escuro para destacar */
+    opacity: 0.3;
+    cursor: default;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+    font-size: 30px;
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    filter: brightness(1);
+    transition: filter 0.3s ease;
+    transition: transform 0.2s ease; /* Transição suave */
+}
+
+.menu a:hover{
+    filter: brightness(0.45); /* Reduzir a luminosidade para simular mudança de cor */
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+.menu img {
+    width: 50px; /* Definir a largura desejada */
+    height: auto;
+    filter: brightness(1);
+    transition: filter 0.3s ease;
+}
+
+.back-button a img {
+    width: 50px; /* Definir a largura desejada */
+    height: auto;
+    cursor: pointer;
+    filter: brightness(1);
+    transition: filter 0.3s ease;
+}
+
+.back-button a img:hover {
+    filter: brightness(0.45); /* Reduzir a luminosidade para simular mudança de cor */
+}
+
+.exit-button {
+    text-align: center;
+    font-size: 30PX;
+    margin-top: 10px; /* Espaçamento superior */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease; /* Transição suave */
+}
+
+.exit-button:hover{
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+.exit-button a {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+.exit-button a:hover {
+    color: rgb(177, 122, 228);
+}
+
+.elementos-lateral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.elementos-lateral li {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinhar itens verticalmente */
+    justify-content: center;
+    margin-bottom: 10px; /* Adicionar espaçamento entre os itens */
+}
+
+.elementos-lateral li img {
+    width: 50px; /* Definir a largura desejada */
+    height: auto;
+    cursor: pointer;
+    filter: brightness(1);
+    transition: filter 0.3s ease;
+}
+
+aside.sidebar {
+    background-image: linear-gradient(to bottom, #0F0840, #100461);/* Cor de fundo da sidebar */
+    position: fixed;
+    z-index: 1000; /* Define um valor de z-index alto */   
+    height: 100%;
+    width: 500px; /* Largura da sidebar */
+    left: -500px; /* Altere conforme for necessário para ajustar a largura da sidebar */
+    top: 0;
+    bottom: 0;
+    transition: left 0.3s ease; /* Adiciona uma transição suave para a animação */
+    transform: translateY(0); /* Adiciona uma transformação inicial */
+}
+
+aside.sidebar.open {
+    left: 0;
+    transform: translateY(0); /* Adiciona uma transformação quando a barra lateral estiver aberta */
+}
+
+.elementos-lateral li {
+    margin-bottom: 50px; /* Espaçamento entre os ícones */
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;    
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 20px;
+}
+
+.menu-toggle {
+    color: rgb(238, 239, 238);
+    background-color: rgb(27, 9, 131);
+    border-color: rgb(15, 8, 64);
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.menu-toggle:hover {
+    background-color: rgb(85, 47, 114);
+}
+
+footer {
+    background-color: transparent;
+    padding: 10px;
+    text-align: right;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer a img {
+    width: 70px; /* Definir a largura desejada */
+    height: auto;
+    filter: brightness(1);
+    transition: filter 0.3s ease;
+    transition: transform 0.2s ease; /* Transição suave */
+}
+
+footer a img:hover {
+    filter: brightness(0.45); /* Reduzir a luminosidade para simular mudança de cor */
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+.sora-uniquifier {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+}
+
+/* Animação de fade-in */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

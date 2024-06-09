@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/logo_tostao_bank.png"/> 
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    
+    <div id="campos_login">
+        <h1>LOGIN</h1>
+        <input type="text" name="txt_usuario" id="usuario" onkeypress="focusOnEnter(event, 'senha')">
+        <h1>SENHA</h1>
+        <input type="password" name="txt_senha" id="senha" placeholder="123" onkeypress="handleEnter(event)">
+    </div><br>
+    
+    <button type="button" id="toggleSenha" onclick="togglePasswordVisibility()">Revelar</button><br><br><br>
+    <button type="button" onclick="login()">Login</button><br><br><br>
+    
+
+    <a class="jumento" href="menu.html">Não Lembra o Usuário ou Senha? Entre por Aqui Direto!</a>
+
+    <script>
+        function login() {
+            var usuario = document.getElementById("usuario").value;
+            var senha = document.getElementById("senha").value;
+
+            if (!usuario.includes("@gmail.com")) {
+                alert("Por favor, insira um endereço de e-mail do Gmail.");
+                document.getElementById("usuario").focus();
+            } else if (senha === "") {
+                alert("Por favor, preencha o campo de senha.");
+                document.getElementById("senha").focus();
+            } else if (usuario !== "" && senha !== "123") {
+                alert("Usuário ou senha incorretos. Tente novamente.");
+                document.getElementById("usuario").focus();
+            } else if (usuario === "" || senha === "") {
+                alert("Por favor, preencha todos os campos.");
+                if (usuario === "") {
+                    document.getElementById("usuario").focus();
+                } else {
+                    document.getElementById("senha").focus();
+                }
+            } else {
+                window.location.href = "menu.html";
+            }
+        }
+
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("senha");
+            var passwordToggle = document.getElementById("toggleSenha");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordToggle.textContent = "Ocultar";
+            } else {
+                passwordInput.type = "password";
+                passwordToggle.textContent = "Revelar";
+            }
+        }
+
+        function focusOnEnter(event, nextFieldId) {
+            if (event.key === "Enter") {
+                document.getElementById(nextFieldId).focus();
+            }
+        }
+
+        function handleEnter(event) {
+            var usuario = document.getElementById("usuario").value;
+            var senha = document.getElementById("senha").value;
+
+            if (event.key === "Enter" && (usuario === "" || senha === "")) {
+                alert("Por favor, preencha todos os campos.");
+                if (usuario === "") {
+                    document.getElementById("usuario").focus();
+                } else {
+                    document.getElementById("senha").focus();
+                }
+            } else if (event.key === "Enter" && usuario !== "" && senha !== "") {
+                login();
+            }
+        }
+    </script>
+
+</body>
+</html>

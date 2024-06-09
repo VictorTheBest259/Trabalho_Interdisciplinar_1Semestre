@@ -1,0 +1,108 @@
+/*Cores Principais do Site:
+Cor de Fundo: #0F0840 ou rgb(15, 8, 64)
+Cor Secundária: #170C59 ou rgb(23, 12, 89)
+Cor Terciaria ou de uva: #552F72 ou rgb(85, 47, 114)
+Quarta Cor, parecida com a secundária só que mais claro: #2B178B ou rgb(43, 23, 139)
+Branco encardido: #EEEFEE ou rgb(238, 239, 238) 
+*/
+
+body{
+    background:#262626;
+    background-image: url('../img/fundo_web.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: fade-in 0.5s ease;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    font-family: cursive;
+    
+}
+
+p {
+    text-align: center;
+    margin-top: 18%;
+    font-size: 40px;
+    color:rgb(238, 239, 238);
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+}
+
+button {
+    background-color:rgb(43, 23, 139);
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    width: 300px;
+    height: 100px;
+    border-radius: 50px;
+    color: rgb(238, 239, 238);
+    font-size: 35px;
+    text-decoration: none;
+    border-color: rgb(23, 12, 89);
+    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease; /* Transição suave */
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+}
+
+button:hover {
+    background-color: rgb(85, 47, 114);
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Animação de fade-in */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+.transition {
+    animation: fade 0.5s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    position:absolute;
+    font-size: 25px;
+    top:20%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    margin:0;
+    padding:0;
+    display: flex;
+}
+
+ul li{
+    list-style:none;
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+    font-size: 80px;
+    letter-spacing:15px;
+    text-shadow:none;
+    animation: animate 1s infinite linear;
+    color: blueviolet;
+}
+
+.sora-uniquifier {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+}

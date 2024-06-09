@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="../../../img/logo_tostao_bank.png"/>
+  <link rel="stylesheet" href="pagar_pix.css">
+  <title>Pagamento Via Pix</title>
+</head>
+<body>
+
+<header>
+    <div class="back-button"><a href="../area_pix.html"><img src="../../../img/Ícones/icon_voltar.png" alt="Fechar"></a></div>
+    <h1>Pagar com Pix</h1>
+</header>
+
+<div class="titulo-pagina">Pagamento Via Pix</div>
+
+<div id="campos_pix">
+    <h1>Nome do Destinatário</h1>
+    <input type="text" name="txt_usuario" id="usuario" onkeypress="focusOnEnter(event, 'valor')">
+    <h1>Valor</h1>
+    <input type="text" name="txt_number" id="valor" oninput="limitarDecimais(event)" onkeypress="handleEnter(event)">
+    <br><br><br><br><br>
+    <button type="button" onclick="fazerPix()">Fazer Pix</button>
+</div>
+
+<script>
+    function fazerPix() {
+        var usuario = document.getElementById("usuario").value;
+        var valor = document.getElementById("valor").value;
+
+        if (!usuario) {
+            alert("Por favor, insira o nome do destinatário");
+            document.getElementById("usuario").focus();
+        } else if (!valor) {
+            alert("Por favor, preencha o campo do valor a ser transferido.");
+            document.getElementById("valor").focus();
+        } else {
+            valor = parseFloat(valor.replace(",", ".")).toFixed(2); // Converter vírgula para ponto e limitar para duas casas decimais
+            alert(`Pix de R$ ${valor} para ${usuario} realizado com sucesso!`);
+            document.getElementById("usuario").value = "";
+            document.getElementById("valor").value = "";
+        }
+    }
+
+    function focusOnEnter(event, nextFieldId) {
+        if (event.key === "Enter") {
+            document.getElementById(nextFieldId).focus();
+        }
+    }
+
+    function handleEnter(event) {
+        if (event.key === "Enter") {
+            fazerPix();
+        }
+    }
+
+    function limitarDecimais(event) {
+        var valor = event.target.value;
+        var partes = valor.split(",");
+        if (partes.length === 2 && partes[1].length > 2) { // Verificar se há mais de dois dígitos após a vírgula
+            event.target.value = partes[0] + "," + partes[1].substring(0, 2); // Limitar para dois dígitos após a vírgula
+        }
+    }
+</script>
+</body>
+</html>

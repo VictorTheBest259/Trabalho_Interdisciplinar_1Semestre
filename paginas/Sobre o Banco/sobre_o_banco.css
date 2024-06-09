@@ -1,0 +1,160 @@
+/*Cores Principais do Site:
+Cor de Fundo: #0F0840 ou rgb(15, 8, 64)
+Cor Secundária: #170C59 ou rgb(23, 12, 89)
+Cor Terciaria ou de uva: #552F72 ou rgb(85, 47, 114)
+Quarta Cor, parecida com a secundária só que mais claro: #2B178B ou rgb(43, 23, 139)
+Branco encardido: #EEEFEE ou rgb(238, 239, 238)
+*/
+
+body {
+    background:#262626;
+    background-image: url('../../img/fundo_web.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #262626;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fade-in 0.5s ease;
+}
+
+header {
+    background-color: #0F0840;
+    padding: 0.75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 100px;
+}
+
+main {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+    text-align: center;
+}
+
+p {
+    font-size: 30px;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+    cursor: default;
+}
+
+.mensagem-fundo {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+    font-size: 80px;
+    margin-top: 80px;
+    color: rgb(85, 47, 114); /* Um tom mais escuro para destacar */
+    opacity: 0.3;
+    cursor: default;
+}
+
+.menu {
+    padding: 1px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+    font-size: 30px;
+    margin: 0;
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    filter: brightness(1);
+    transition: filter 0.3s ease;
+}
+
+.menu a:hover{
+    filter: brightness(0.45); /* Reduzir a luminosidade para simular mudança de cor */
+}
+
+.menu img {
+    width: 50px; /* Definir a largura desejada */
+    height: auto;
+    filter: brightness(1);
+    transition: filter 0.3s ease;
+}
+
+.menu img:hover {
+    filter: brightness(0.45); /* Reduzir a luminosidade para simular mudança de cor */
+}
+
+.back-button a img {
+    width: 50px; /* Definir a largura desejada */
+    height: auto;
+    cursor: pointer;
+    filter: brightness(1);
+    transition: filter 0.3s ease;
+}
+
+.back-button a img:hover {
+    filter: brightness(0.45); /* Reduzir a luminosidade para simular mudança de cor */
+}
+
+.exit-button {
+    text-align: center;
+    margin-top: 10px; /* Espaçamento superior */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    text-align: center;
+}
+
+.exit-button img {
+    width: 30px;
+    height: 30px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;    
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 20px;
+}
+
+.menu-toggle:hover {
+    background-color: rgb(85, 47, 114);
+}
+
+.sora-uniquifier {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+}
+
+/* Animação de fade-in */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

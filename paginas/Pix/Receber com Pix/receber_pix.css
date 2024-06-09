@@ -1,0 +1,115 @@
+/*Cores Principais do Site:
+Cor de Fundo: #0F0840 ou rgb(15, 8, 64)
+Cor Secundária: #170C59 ou rgb(23, 12, 89)
+Cor Terciaria ou de uva: #552F72 ou rgb(85, 47, 114)
+Quarta Cor, parecida com a secundária só que mais claro: #2B178B ou rgb(43, 23, 139)
+Branco encardido: #EEEFEE ou rgb(238, 239, 238)
+*/
+
+body {
+    background:#262626;
+    background-image: url('../../../img/fundo_web.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #262626;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fade-in 0.5s ease;
+}
+
+header {
+    background-color: #0F0840;
+    padding: 0.75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 100px;
+}
+
+main {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+    cursor: default;
+}
+
+.back-button a img {
+    width: 50px; /* Definir a largura desejada */
+    height: auto;
+    cursor: pointer;
+    filter: brightness(1);
+    transition: filter 0.3s ease;
+}
+
+.back-button a img:hover {
+    filter: brightness(0.45); /* Reduzir a luminosidade para simular mudança de cor */
+}
+
+.titulo-pagina {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+    font-size: 50px;
+    margin-top: 2px;
+    cursor: default;
+    text-align: center;
+}
+
+.jumento{
+    color: rgb(178, 111, 230);
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    transition: transform 0.2s ease; /* Transição suave */
+}
+
+.jumento:hover {
+    color: rgb(202, 158, 236);
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+.jumento:active{
+    color: rgb(255, 255, 255);
+}
+
+#campos_pix{
+    text-align: center;
+    padding-bottom: 400px;
+}
+
+.sora-uniquifier {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+}
+
+/* Animação de fade-in */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
